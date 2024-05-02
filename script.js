@@ -16,3 +16,18 @@ setInterval(updateClock, 1000);
 
 // Initial call to update the clock when the page loads
 updateClock();
+
+const themeSlider = document.getElementById('themeSlider');
+const body = document.body;
+
+themeSlider.addEventListener('input', () => {
+    const value = themeSlider.value;
+    if (value > 50) {
+        body.classList.remove('dark-theme');
+        body.classList.add('light-theme');
+    } else {
+        body.classList.remove('light-theme');
+        body.classList.add('dark-theme');
+    }
+});
+
