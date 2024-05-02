@@ -5,6 +5,10 @@ function updateClock() {
     const seconds = now.getSeconds().toString().padStart(2, '0');
     const timeString = `${hours}:${minutes}:${seconds}`;
     document.getElementById('clock').textContent = timeString;
+
+    const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+    const dateString = now.toLocaleDateString('en-US', options);
+    document.getElementById('date').textContent = dateString;
 }
 
 // Update the clock every second
