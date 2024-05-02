@@ -129,7 +129,7 @@ body {
 }
 
 /* Media query for mobile devices */
-@media (max-width: 375px) {
+@media (min-width: 375px) {
     body{
         display: block;
         min-height: 100vhw;
@@ -147,19 +147,4 @@ body {
     }
 }
 
-/* Media query for desktop devices */
-@media (min-width: 891px) {
-    .header {
-        
-        padding: 30px;
-    }
 
-    .header h1 {
-        font-size: 3rem;
-    }
-    .slider-container {
-       margin: 10%;
-        width: 5%;
-    }
-    
-}
