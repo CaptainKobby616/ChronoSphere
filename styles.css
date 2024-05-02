@@ -9,6 +9,38 @@ body {
     color: #fff;
 }
 
+
+/* Header styling */
+.header {
+    background-color: #000;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+.header h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+
+/* Style the header text like Tesla's interface */
+.header h1::before {
+    content: '';
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-color: #4cd964; /* Green color like Tesla's interface */
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+
 .clock-container {
     text-align: center;
     border-radius: 10px;
@@ -17,12 +49,25 @@ body {
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
 }
 
+.icon {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 10px; /* Adjust margin as needed */
+    color: #4cd964; /* Green color for the lightning bolt */
+}
+
+.icon i {
+    font-size: 1.5rem; /* Adjust icon size as needed */
+}
+
 #clock {
-    font-size: 3rem;
+    font-family: 'DSEG7 Classic', sans-serif; /* Use a Casio-style font */
+    font-size: 5rem;
     color: #fff;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-    letter-spacing: 2px;
+    letter-spacing: 5px; /* Increase letter spacing for a digital display effect */
 }
+
 
 #alarm {
     color: #ff3b30; /* Red for alarm */
@@ -34,4 +79,37 @@ body {
 
 #stopwatch {
     color: #4cd964; /* Green for stopwatch */
+}
+#date {
+    font-size: 1.5rem; /* Font size for the date */
+    margin-top: 10px; /* Add some space between the clock and date */
+}
+
+/* Media query for mobile devices */
+@media (max-width: 400px) {
+    body{
+        display: block;
+        min-height: 100vhw;
+    }
+    .header {
+        padding: 10px;
+    }
+
+    .header h1 {
+        font-size: 1.2rem;
+    }
+    #clock {
+        font-size: 3rem;   
+    }
+}
+
+/* Media query for desktop devices */
+@media (min-width: 891px) {
+    .header {
+        padding: 30px;
+    }
+
+    .header h1 {
+        font-size: 3rem;
+    }
 }
