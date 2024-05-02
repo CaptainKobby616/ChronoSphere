@@ -129,7 +129,7 @@ body {
 }
 
 /* Media query for mobile devices */
-@media (max-width: 400px) {
+@media (max-width: 375px) {
     body{
         display: block;
         min-height: 100vhw;
